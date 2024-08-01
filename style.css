@@ -19,6 +19,7 @@
 
 .scroller {
     max-width: 600px;
+    margin: 0 auto;
     margin-top: 100px;
     /* overflow: hidden; */
     border: 2px solid gray;
@@ -40,15 +41,19 @@
 .scroller[data-animated=true] .scroller_inner {
     width: max-content;
     background: rebeccapurple;
-    animation: scroll 20s linear infinite;
+    animation: scroll var(--animation-direction, forwards) 20s linear infinite;
+}
+
+.scroller[data-direction="right"] {
+    --animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+    --animation-direction: forwards; /* custom property*/
 }
 
 @keyframes scroll {
     to {
         transform: translate(calc(-50% - 0.5rem));
     }
-}
-
-.tag-list li.test {
-    background: red;
 }
