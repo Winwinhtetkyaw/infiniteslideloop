@@ -51,3 +51,56 @@ function addAnimation() {
 //         });
 //     });
 // }
+
+// Json
+// to page open amination
+var taikoAnimationPC = bodymovin.loadAnimation({
+    container: document.getElementById("sakura-pc"),
+    path: "/assets/json/OP_pc.json",
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+  });
+  
+  var taikoAnimationSP = bodymovin.loadAnimation({
+    container: document.getElementById("sakura-sp"),
+    path: "/assets/json/OP_smartphone.json",
+    renderer: "svg",
+    loop: false,
+    autoplay: true,
+    // rendererSettings: {
+    //   preserveAspectRatio: "xMidYMid slice", // This ensures the SVG covers the container
+    // }
+  });
+
+  var fiftyAnimation = bodymovin.loadAnimation({
+    container: document.getElementById("fifty-animation"),
+    path: "/assets/json/50th_5.json",
+    renderer: "svg",
+    loop: false,
+    autoplay: true,
+  });
+
+  var travel = bodymovin.loadAnimation({
+    container: document.getElementById("travel"),
+    path: "/assets/json/travel.json",
+    renderer: "svg",
+    loop: false,
+    autoplay: true,
+  });
+
+  var tree = bodymovin.loadAnimation({
+    container: document.getElementById("tree"),
+    path: "/assets/json/tree-animation.json",
+    renderer: "svg",
+    loop: false,
+    autoplay: true,
+  });
+
+  var watch = bodymovin.loadAnimation({
+    container: document.getElementById("watch"),
+    path: "/assets/json/watch.json",
+    renderer: "svg",
+    loop: false,
+    autoplay: true,
+  });
